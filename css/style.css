@@ -1,0 +1,132 @@
+/*Global*/
+*{
+	position: relative;
+	box-sizing: border-box;
+}
+body{
+	font-family: Arial;
+	color: #fff;
+	font-size: 20px;
+}
+li{
+	display: inline-block;
+	margin-right: 24px;
+}
+.wrapper{
+	width: 100%;
+}
+/*Grid*/
+.row:after{
+	content: "";
+	clear: both;
+	display: block;
+	visibility: hidden;
+}
+.col{
+	float: left;
+	width: 25%;
+}
+@media (min-width: 601px) and (max-width: 1200px){
+	.col{
+		width: 50%;
+	}
+}
+@media (max-width: 600px){
+	.col{
+		width: 100%;
+	}
+}
+/*Custom*/
+.main-bg{
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, rgba(9,42,77,1) 9%, rgba(84,199,255,1) 100%);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+/*Footer*/
+footer{
+	width: 100%;
+	height: 40px;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	z-index: 50;
+}
+.title{
+	position: absolute;
+	left: 16px;
+	top: 8px;
+}
+.menu ul{
+	float: right;
+	margin: 0;
+	margin-right: -8px;
+	margin-top: 8px;
+}
+.menuIcon{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 12px;
+	background-size: cover;
+	background-position: center;
+	display: none;
+}
+@media(max-width: 600px){
+	.menu ul{
+		display: none;
+	}
+	.menuIcon{
+		display: inline-block;
+	}
+}
+/*Greeting */
+.greeting{
+	position: absolute;
+	top: 40px;
+	width: 100%;
+	height: 300px;
+	background-color: rgba(255,255,255,0.2);
+	box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+	font-size: 2em;
+	text-align: center;
+	line-height: 300px;
+}
+/*Content*/
+.content{
+	position: absolute;
+	top: 370px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1216px;
+}
+.content .row{
+	margin-right: -16px;
+	overflow: hidden;
+}
+.content .elements{
+	width: 100%;
+	padding-right: 16px;
+	margin-bottom: 24px;
+}
+.content .elements .imageBox{
+	background-color: rgba(0,0,0,0.5);
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+.content .elements .image{
+	width: 100%;
+	height: 192px;
+	background-size: cover;
+	background-position: center;
+}
+.content .elements .text{
+	text-align: center;
+	line-height: 40px;
+	color: rgba(256,256,256,0.8);
+}
+@media (max-width: 1200px){
+	.content{
+	width: 90vw;
+	}
+}
